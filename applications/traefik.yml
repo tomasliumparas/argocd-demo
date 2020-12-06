@@ -22,6 +22,12 @@ spec:
       - name: ingressRoute.dashboard.enabled
         value: "false"
 
+      values: |
+        ingressRoute:
+          dashboard:
+            enabled: false
+
+
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
