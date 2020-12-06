@@ -12,18 +12,15 @@ spec:
     targetRevision: 9.11.0
     chart: traefik
     helm:
-      values: |
-        rbac:
-          namespaced: false
-        service:
-          spec:
-            externalTrafficPolicy: Local
-        ingressRoute:
-          dashboard:
-            enabled: true
-        logs:
-          access:
-            enabled: true
+      parameters:
+        - name: "rbac.namespaced"
+          value: false
+        - name: "service.spec.externalTrafficPolicy"
+          value: Local
+        - name: "ingressRoute.dashboard.enabled"
+          value: true
+        - name: "logs.access.enabled"
+          value: true
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
