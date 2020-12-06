@@ -14,13 +14,13 @@ spec:
     helm:
       parameters:
         - name: "rbac.namespaced"
-          value: false
+          value: "false"
         - name: "service.spec.externalTrafficPolicy"
           value: Local
         - name: "ingressRoute.dashboard.enabled"
-          value: true
+          value: "true"
         - name: "logs.access.enabled"
-          value: true
+          value: "true"
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
