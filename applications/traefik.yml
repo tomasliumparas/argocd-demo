@@ -13,9 +13,9 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: traefik https://helm.traefik.io/traefik
-    targetRevision: HEAD
-    path: traefik
+    repoURL: https://helm.traefik.io/traefik
+    targetRevision: 9.11.0
+    chart: traefik
 
     helm:
       parameters:
