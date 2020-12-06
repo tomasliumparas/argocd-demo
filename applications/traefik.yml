@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: traefik https://helm.traefik.io/traefik
     targetRevision: HEAD
-    chart: traefik
+    path: traefik
 
     helm:
       parameters:
