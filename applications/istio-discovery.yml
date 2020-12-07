@@ -11,7 +11,9 @@ spec:
     revision: 1.6.14
     helm:
       version: v3
-      
+      parameters:
+        releaseName: istio
+
   destination:
     namespace: istio-system
     server: https://kubernetes.default.svc
