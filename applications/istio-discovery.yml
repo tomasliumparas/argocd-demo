@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio
+  name: istio-discovery
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/istio/istio
-    path: manifests/charts/base
+    path: manifests/charts/istio-control/istio-discovery
     helm:
       version: v3
   destination:
