@@ -10,7 +10,7 @@ spec:
     repoURL: https://helm.linkerd.io/edge
     targetRevision: 20.12.1
     helm:
-      version: v3
+      version: v2
       parameters:
       - name: global.identityTrustAnchorsPEM
         value: |
