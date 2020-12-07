@@ -25,6 +25,8 @@ spec:
           value: "true"
         - name: "persistence.existingClaim"
           value: "azure-traefikdata"
+        - name: "additionalArguments[0]"
+          value: "-certificatesresolvers.le.acme.storage=/data/acme.json"      
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
