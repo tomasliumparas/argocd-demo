@@ -10,6 +10,9 @@ spec:
     path: manifests/charts/base
     helm:
       version: v3
+      parameters:
+        releaseName: istio
+
   destination:
     namespace: istio-system
     server: https://kubernetes.default.svc
