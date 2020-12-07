@@ -26,7 +26,11 @@ spec:
         - name: "persistence.existingClaim"
           value: "azure-traefikdata"
         - name: "additionalArguments[0]"
-          value: "-certificatesresolvers.le.acme.storage=/data/acme.json"      
+          value: "-certificatesresolvers.le.acme.storage=/data/acme.json"
+        - name: "pilot.enabled"
+          value: "true"
+        - name: "pilot.token"
+          value: "d26fa1de-86eb-492b-a870-84b976d9c67e"
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
