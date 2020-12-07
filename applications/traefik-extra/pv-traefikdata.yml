@@ -1,0 +1,13 @@
+apiVersion: "v1"
+kind: "PersistentVolume"
+metadata:
+  name: "azure-traefikdata" 
+spec:
+  capacity:
+    storage: "3Gi" 
+  accessModes:
+    - "ReadWriteOnce"
+  storageClassName: azure-traefikdata
+  azureFile:
+    secretName: azure-storage-account-demok8s
+    shareName: traefikdata
