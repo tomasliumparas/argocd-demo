@@ -13,7 +13,7 @@ spec:
     chart: linkerd2
     helm:
       version: v2
-      file parameters:
+      fileParameters:
         - name: global.identityTrustAnchorsPEM
           path: ca.crt
         - name: identity.issuer.tls.crtPEM
