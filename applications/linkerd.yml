@@ -47,7 +47,7 @@ spec:
       - name: identity.issuer.crtExpiry
         value: "2021-12-07T15:24:11Z"
       - name: "enforcedHostRegexp"
-        value: ""
+        value: "^(localhost|10.7.0.64|127\.0\.0\.1|linkerd-web\.linkerd\.svc\.cluster\.local|linkerd-web\.linkerd\.svc|\[::1\])(:\d+)?$"
       - name: installNamespace
         value: "true"
   destination:
