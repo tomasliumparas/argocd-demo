@@ -7,8 +7,8 @@ spec:
   project: default
   source:
     chart: linkerd2
-    repoURL: https://helm.linkerd.io/stable
-    targetRevision: 2.8.0
+    repoURL: https://helm.linkerd.io/edge
+    targetRevision: 20.12.1
     helm:
       parameters:
       - name: global.identityTrustAnchorsPEM
