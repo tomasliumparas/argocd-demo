@@ -47,8 +47,7 @@ spec:
       - name: identity.issuer.crtExpiry
         value: "2021-12-07T15:24:11Z"
       - name: "enforcedHostRegexp"
-        value: ""
-        forceString: true
+        value: "10.7.0.63"
       - name: installNamespace
         value: "true"
   destination:
