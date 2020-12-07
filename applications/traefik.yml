@@ -21,6 +21,10 @@ spec:
           value: "true"
         - name: "logs.access.enabled"
           value: "true"
+        - name: "persistence.enabled"
+          value: "true"
+        - name: "persistence.existingClaim"
+          value: "azure-traefikdata"
   destination:
     server: https://kubernetes.default.svc
     namespace: traefik
