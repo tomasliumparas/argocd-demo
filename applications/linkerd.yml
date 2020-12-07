@@ -24,10 +24,31 @@ spec:
           A0kAMEYCIQCwL13/JGkc/e3HRncUveP1k9lIH/Okk3dTKBLhQw3kFwIhAIQd1T1E
           Ex3pl6G+6/oX7181xZ67tH6eTfNj4CELEEnm          
           -----END CERTIFICATE-----
-      - name: identity.issuer.scheme
-        value: kubernetes.io/tls
+      - name: identity.issuer.tls.crtPEM
+        value: |
+          -----BEGIN CERTIFICATE-----
+          MIIBlTCCATygAwIBAgIRAPWPGkS8vq62p6Xxy02ZAuQwCgYIKoZIzj0EAwIwKTEn
+          MCUGA1UEAxMeaWRlbnRpdHkubGlua2VyZC5jbHVzdGVyLmxvY2FsMB4XDTIwMTIw
+          NzEyMzYwM1oXDTIxMTIwNzEyMzYwM1owKTEnMCUGA1UEAxMeaWRlbnRpdHkubGlu
+          a2VyZC5jbHVzdGVyLmxvY2FsMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE3OOg
+          VWcqV+cZjPVWfCvanGmTbEpnkIUSIWYQ/kl8r79FpxSMR0+HcZXuPLCpLJh6P/MQ
+          GEFxo+61LTbREEjdA6NFMEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYB
+          Af8CAQAwHQYDVR0OBBYEFK8/Y0GjXPUBVLyUEtjAcoY9nwFSMAoGCCqGSM49BAMC
+          A0cAMEQCICEjwZcNW4ojbWSrh5G/i/onarj7ytwGSmZFb0W+0r8YAiBbjUFAucn+
+          QtuFnt9EBd/Yvjf60BpdS6JcZxI9I5M63w==
+          -----END CERTIFICATE-----    
+      - name: identity.issuer.tls.keyPEM
+        value: |
+          -----BEGIN EC PRIVATE KEY-----
+          MHcCAQEEIHJhcSPmxzfqBM8xT4mo7o7VVpDflSFfxx/HpXYVsEEGoAoGCCqGSM49
+          AwEHoUQDQgAE3OOgVWcqV+cZjPVWfCvanGmTbEpnkIUSIWYQ/kl8r79FpxSMR0+H
+          cZXuPLCpLJh6P/MQGEFxo+61LTbREEjdAw==
+          -----END EC PRIVATE KEY-----
+      - name: identity.issuer.crtExpiry
+        value: "2021-12-07T15:24:11Z"    
+                
       - name: installNamespace
-        value: "false"
+        value: "true"
   destination:
     namespace: linkerd
     server: https://kubernetes.default.svc
