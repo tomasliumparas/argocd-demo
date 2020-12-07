@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: main/traefik-extra
+  name: traefik-extra
   namespace: argocd
 spec:
   project: default
