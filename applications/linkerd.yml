@@ -48,6 +48,7 @@ spec:
         value: "2021-12-07T15:24:11Z"
       - name: "enforcedHostRegexp"
         value: ""
+        forceString: true
       - name: installNamespace
         value: "true"
   destination:
