@@ -13,6 +13,16 @@ spec:
     chart: linkerd2
     helm:
       version: v2
+      file parameters:
+        - name: global.identityTrustAnchorsPEM
+          path: ca.crt
+        - name: identity.issuer.tls.crtPEM
+          path: issuer.crt
+        - name: identity.issuer.tls.keyPEM
+          path: issuer.key
+      parameters:
+        - name: identity.issuer.crtExpiry
+          value: "2021-12-07T14:37:14Z"
   destination:
     server: https://kubernetes.default.svc
     namespace: linkerd
