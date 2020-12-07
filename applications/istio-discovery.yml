@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: https://github.com/istio/istio
     path: manifests/charts/istio-control/istio-discovery
+    revision: 1.6.14
     helm:
       version: v3
   destination:
