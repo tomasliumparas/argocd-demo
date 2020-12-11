@@ -3,13 +3,9 @@ apiVersion: kadalu-operator.storage/v1alpha1
 kind: KadaluStorage
 metadata:
  # This will be used as name of PV Hosting Volume
-  name: bronze
+  name: bronze1
 spec:
   type: Replica1
   storage:
-    - node: snode0
-      device: /dev/sde
     - node: snode1
       device: /dev/sde
-    - node: snode2
-      device: /dev/sde            
