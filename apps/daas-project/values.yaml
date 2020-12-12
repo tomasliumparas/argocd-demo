@@ -10,7 +10,7 @@ project:
   quota:
     cpu: 1
     ram: 2
-  namespace: "daas-{{ .Values.project.key }}"
+  namespace: "daas-"{{ .Values.project.key }}
 
 dummyapp:
   namespace: ""
