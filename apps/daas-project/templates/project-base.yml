@@ -13,7 +13,7 @@ spec:
     helm:
       {{- with .Values }}    
       values: |
-        {{ - toYaml . | nindent 8 }}
+        {{- toYaml . | nindent 8 }}
       {{- end }}
   destination:
     server: {{ .Values.spec.destination.server }}
