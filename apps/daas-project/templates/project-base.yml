@@ -17,7 +17,7 @@ spec:
       {{- end }}
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: {{ .Values.dummyapp.namespace }}
+    namespace: "daas-{{ .Values.project.key }}"
   syncPolicy:
     automated:
       prune: false
