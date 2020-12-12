@@ -17,3 +17,5 @@ spec:
   destinations:
   - server: '*'
     namespace: "daas-{{ .Values.project.key }}"
+  - server: '*'
+    namespace: "argocd"    
