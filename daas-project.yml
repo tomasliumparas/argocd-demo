@@ -9,10 +9,16 @@ spec:
   source:
     repoURL: https://github.com/tomasliumparas/argocd-demo.git
     targetRevision: HEAD
-    apth: daas-project
+    path: apps/daas-project
+    helm:
+      parameters:
+      - name: "project.key"
+        value: "34frx"
+      - name: "dummyapp.namespace"
+        value: daas-34frx
   destination:
     server: https://kubernetes.default.svc
-    namespace: daas-34frx
+    namespace: argocd
   syncPolicy:
     automated:
       prune: false
