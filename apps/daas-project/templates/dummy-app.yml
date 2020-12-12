@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dummy-app
+  name: {{ .Values.project.key }}-dummy-app
   namespace: argocd
 spec:
   project: "daas-{{ .Values.project.key }}"
