@@ -5,7 +5,7 @@ metadata:
   name: traefik-extra
   namespace: argocd
 spec:
-  project: default
+  project: base
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: HEAD

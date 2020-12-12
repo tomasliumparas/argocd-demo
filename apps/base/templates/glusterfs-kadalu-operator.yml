@@ -5,7 +5,7 @@ metadata:
   name: glusterfs-kadalu-operator
   namespace: argocd
 spec:
-  project: default
+  project: base
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: HEAD
