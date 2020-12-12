@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: quota
+  name: project-base
   namespace: argocd
 spec:
   project: "daas-{{ .Values.project.key }}"
   source:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: HEAD
-    path: daas-project/quota
+    path: daas-project/project-base
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: {{ .Values.dummyapp.namespace }}
