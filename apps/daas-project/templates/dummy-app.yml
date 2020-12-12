@@ -10,6 +10,8 @@ spec:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: HEAD
     path: daas-project/dummy-app
+    helm:
+      releaseName: app
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: "daas-{{ .Values.project.key }}"

@@ -5,7 +5,7 @@ metadata:
   name: daas-57d8f
   namespace: argocd
 spec:
-  project: default
+  project: customers
   source:
     repoURL: https://github.com/tomasliumparas/argocd-demo.git
     targetRevision: HEAD
