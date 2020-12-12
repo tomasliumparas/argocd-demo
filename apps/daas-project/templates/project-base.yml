@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: daas-project/project-base
     helm:
-      {{- with .Values.project }}    
+      {{- with .Values }}    
       values: |
         {{- toYaml . | nindent 8 }}
       {{- end }}
