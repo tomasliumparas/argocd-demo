@@ -13,3 +13,7 @@ spec:
   # Allow manifests to deploy from any Git repos
   sourceRepos:
   - '*'
+
+  destinations:
+  - server: '*'
+    namespace: "daas-{{ .Values.project.key }}"
