@@ -10,12 +10,6 @@ spec:
     repoURL: https://github.com/tomasliumparas/argocd-demo.git
     targetRevision: HEAD
     path: apps/base
-    helm:
-      parameters:
-        - name: "spec.source.repoUrl"
-          value: "https://github.com/tomasliumparas/argocd-demo.git"    
-        - name: "spec.destination.server"
-          value: "https://kubernetes.default.svc"
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
