@@ -12,7 +12,7 @@ spec:
     path: daas-project/project-base
     helm:
       values: |
-        {{ .Values.project }}
+        {{ - toYaml .Values | nindent 8 }}
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: {{ .Values.dummyapp.namespace }}
