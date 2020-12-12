@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: glusterfs-kadalu-operator
+  name: glusterfs-storage-pools
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/tomasliumparas/argocd-demo.git
+    repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: HEAD
-    path: applications/glusterfs-kadalu-operator
+    path: base/glusterfs-storage-pools
   destination:
-    server: https://kubernetes.default.svc
+    server: {{ .Values.spec.destination.server }}
     namespace: kadalu
   syncPolicy:
     automated:

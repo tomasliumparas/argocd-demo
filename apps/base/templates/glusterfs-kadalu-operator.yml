@@ -1,0 +1,22 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: glusterfs-kadalu-operator
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: HEAD
+    path: base/glusterfs-kadalu-operator
+  destination:
+    server: {{ .Values.spec.destination.server }}
+    namespace: kadalu
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:     
+    - Validate=false 
+    - CreateNamespace=true

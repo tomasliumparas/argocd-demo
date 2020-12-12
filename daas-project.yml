@@ -2,21 +2,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: glusterfs-storage-pools
+  name: daas-34frx
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/tomasliumparas/argocd-demo.git
     targetRevision: HEAD
-    path: applications/glusterfs-storage-pools
+    apth: daas-project
   destination:
     server: https://kubernetes.default.svc
-    namespace: kadalu
+    namespace: daas-34frx
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true
     syncOptions:     
     - Validate=false 
-    - CreateNamespace=true
+    - CreateNamespace=true       

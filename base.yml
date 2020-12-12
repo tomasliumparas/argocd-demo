@@ -2,18 +2,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: traefik-extra
+  name: base
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/tomasliumparas/argocd-demo.git
     targetRevision: HEAD
-    path: applications/traefik-extra
+    path: apps/base
   destination:
     server: https://kubernetes.default.svc
-    namespace: traefik
+    namespace: argocd
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true

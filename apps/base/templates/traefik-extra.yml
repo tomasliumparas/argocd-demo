@@ -1,0 +1,19 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: traefik-extra
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: HEAD
+    path: base/traefik-extra
+  destination:
+    server: {{ .Values.spec.destination.server }}
+    namespace: traefik
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
