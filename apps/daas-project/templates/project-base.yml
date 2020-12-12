@@ -1,0 +1,22 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: project-base
+  namespace: argocd
+spec:
+  project: "daas-{{ .Values.project.key }}"
+  source:
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: HEAD
+    path: daas-project/project-base
+  destination:
+    server: {{ .Values.spec.destination.server }}
+    namespace: {{ .Values.dummyapp.namespace }}
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:     
+    - Validate=false 
+    - CreateNamespace=false
