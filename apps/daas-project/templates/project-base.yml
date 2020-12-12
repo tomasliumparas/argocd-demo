@@ -11,7 +11,8 @@ spec:
     targetRevision: HEAD
     path: daas-project/project-base
     helm:
-      values: {{ .Values }}
+      values: |
+        {{ .Values }}
   destination:
     server: {{ .Values.spec.destination.server }}
     namespace: {{ .Values.dummyapp.namespace }}
