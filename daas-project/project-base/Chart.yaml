@@ -1,5 +1,0 @@
-apiVersion: v1
-appVersion: "1.0"
-description: DaaS project app
-name: daas project
-version: 0.1.0
