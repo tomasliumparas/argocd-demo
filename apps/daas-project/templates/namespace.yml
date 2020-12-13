@@ -4,6 +4,8 @@ metadata:
   name: "daas-{{ .Values.project.key }}"
   annotations:
     linkerd.io/inject: enabled
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io    
 spec:
   finalizers:
   - kubernetes

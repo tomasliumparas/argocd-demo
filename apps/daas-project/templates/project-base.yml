@@ -4,6 +4,8 @@ kind: Application
 metadata:
   name: {{ .Values.project.key }}-base
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io  
 spec:
   project: "daas-{{ .Values.project.key }}"
   source:
