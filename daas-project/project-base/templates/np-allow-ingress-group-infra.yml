@@ -3,9 +3,8 @@ kind: NetworkPolicy
 metadata:
   name: allow-ingress-group-infra
 spec:
-  podSelector: {}
   ingress:
-  - from:
-    - namespaceSelector:
-        matchLabels:
-          source.group.netpolicy.hypermachines.net/infra: "true"
+  - action: Allow
+    source:
+      namespaceSelector: source.group.netpolicy.hypermachines.net/infra == 'true'
+        
