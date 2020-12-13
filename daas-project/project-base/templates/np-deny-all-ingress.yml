@@ -1,9 +1,9 @@
+apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
 metadata:
-  name: deny-all-ingress
+  name: deny-all-ingress-egress
 spec:
-  podSelector: {}
-  ingress:
-  - from:
-    - podSelector: {}
+  selector: all()
+  types:
+  - Ingress
+  - Egress
