@@ -6,7 +6,7 @@ metadata:
     linkerd.io/inject: enabled
   labels:
     name: "daas-{{ .Values.project.key }}"
-    source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }}: true
+    source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }}: "true"
 spec:
   finalizers:
   - kubernetes
