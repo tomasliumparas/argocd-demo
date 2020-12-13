@@ -1,4 +1,4 @@
-apiVersion: crd.projectcalico.org/v3
+apiVersion: crd.projectcalico.org
 kind: NetworkPolicy
 metadata:
   name: allow-ingress-group-infra
