@@ -3,8 +3,9 @@ kind: NetworkPolicy
 metadata:
   name: allow-ingress-within-ns
 spec:
+  podSelector: {}
   ingress:
   - from:
-    - NamespaceSelector:
+    - namespaceSelector:
         matchLabels:
           name: "daas-{{ .Values.project.key }}"
