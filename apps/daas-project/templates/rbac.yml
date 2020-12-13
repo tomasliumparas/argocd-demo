@@ -1,0 +1,24 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: "daas-{{ .Values.project.key }}-role"
+  namespace: "daas-{{ .Values.project.key }}"
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "secrets"]
+    verbs: ["get", "list", "watch"]
+
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: "daas-{{ .Values.project.key }}-rolebinding"
+  namespace: "daas-{{ .Values.project.key }}"
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace: "daas-{{ .Values.project.key }}"
+roleRef:
+  kind: Role
+  name: "daas-{{ .Values.project.key }}-role"
+  apiGroup: rbac.authorization.k8s.io    
