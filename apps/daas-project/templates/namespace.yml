@@ -3,9 +3,7 @@ kind: Namespace
 metadata:
   name: "daas-{{ .Values.project.key }}"
   annotations:
-    linkerd.io/inject: enabled
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io    
+    linkerd.io/inject: enabled  
 spec:
   finalizers:
   - kubernetes
