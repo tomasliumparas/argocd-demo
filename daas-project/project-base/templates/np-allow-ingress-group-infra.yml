@@ -8,4 +8,4 @@ spec:
   - from:
     - namespaceSelector:
         matchLabels:
-          "source.group.netpolicy.hypermachines.net/infra": true
+          source.group.netpolicy.hypermachines.net/infra: "true"
