@@ -5,7 +5,7 @@ metadata:
 spec:
   podSelector:
   ingress:
-    - from:
-      - NamespaceSelector:
-          matchLabels:
-            name: "daas-{{ .Values.project.key }}"
+  - from:
+    - NamespaceSelector:
+        matchLabels:
+          name: "daas-{{ .Values.project.key }}"
