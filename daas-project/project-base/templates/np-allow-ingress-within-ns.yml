@@ -8,4 +8,4 @@ spec:
   - from:
     - namespaceSelector:
         matchLabels:
-          name: "daas-{{ .Values.project.key }}"
+          source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }}: "true"
