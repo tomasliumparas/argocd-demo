@@ -1,7 +1,7 @@
 apiVersion: crd.projectcalico.org/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-ingress-group-infra
+  name: allow-ingress-linkerd
 spec:
   selector: all()
   ingress:
