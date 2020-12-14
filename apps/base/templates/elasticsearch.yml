@@ -14,7 +14,16 @@ spec:
     helm:
       parameters:
         - name: "persistence.enabled"
-          value: "false"      
+          value: "false"
+        - name: "resources.requests.cpu"
+          value: "3000m"
+        - name: "resources.requests.memory"
+          value: "8Gi"          
+        - name: "resources.limits.cpu"
+          value: "3000m"
+        - name: "resources.limits.memory"
+          value: "8Gi"             
+
 
   destination:
     server: https://kubernetes.default.svc
