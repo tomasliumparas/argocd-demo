@@ -1,0 +1,19 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: elk-extra
+  namespace: argocd
+spec:
+  project: base
+  source:
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: HEAD
+    path: base/elk-extra
+  destination:
+    server: {{ .Values.spec.destination.server }}
+    namespace: logging
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

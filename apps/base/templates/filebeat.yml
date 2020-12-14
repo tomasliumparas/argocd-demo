@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: elasticsearch
+  name: filebeat
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,11 +10,7 @@ spec:
   source:
     repoURL: https://helm.elastic.co
     targetRevision: 7.10.1
-    chart: elasticsearch
-    helm:
-      parameters:
-        - name: "persistence.enabled"
-          value: "false"      
+    chart: filebeat    
 
   destination:
     server: https://kubernetes.default.svc

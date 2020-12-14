@@ -28,7 +28,7 @@ spec:
       allowEmpty: false 
     syncOptions:     
     - Validate=false 
-    - CreateNamespace=true 
+    - CreateNamespace=false 
     retry:
       limit: 5 
       backoff:
