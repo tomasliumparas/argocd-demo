@@ -6,4 +6,3 @@ spec:
   selector: all()
   types:
   - Ingress
-  - Egress
