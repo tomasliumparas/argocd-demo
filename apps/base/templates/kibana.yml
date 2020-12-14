@@ -13,8 +13,10 @@ spec:
     chart: kibana
     helm:
       parameters:
-        - name: "persistence.enabled"
-          value: "false"  
+        - name: "service.type"
+          value: "LoadBalancer"
+        - name: "service.port"
+          value: "80"          
 
   destination:
     server: https://kubernetes.default.svc
