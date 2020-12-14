@@ -3,6 +3,7 @@ kind: NetworkPolicy
 metadata:
   name: allow-within-ns
 spec:
+  order: 10
   selector: all()
   ingress:
   - action: Allow

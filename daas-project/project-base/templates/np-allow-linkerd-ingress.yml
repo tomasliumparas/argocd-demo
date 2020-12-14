@@ -3,6 +3,7 @@ kind: NetworkPolicy
 metadata:
   name: allow-ingress-linkerd
 spec:
+  order: 20
   selector: all()
   ingress:
   - action: Allow

@@ -3,6 +3,7 @@ kind: NetworkPolicy
 metadata:
   name: deny-all-ingress-egress
 spec:
+  order: 900
   selector: all()
   types:
   - Ingress
