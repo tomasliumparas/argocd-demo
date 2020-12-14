@@ -1,13 +1,11 @@
-apiVersion: crd.projectcalico.org/v1
+apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-within-ns
+  name: allow-ingress-within-ns
 spec:
-  order: 10
-  selector: all()
+  podSelector:
   ingress:
-  - action: Allow
-    protocol: TCP
-    source:
-      namespaceSelector: source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }} == 'true'
-                  
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }}: "true" 

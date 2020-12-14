@@ -1,11 +1,11 @@
-apiVersion: crd.projectcalico.org/v1
+apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: allow-ingress-group-infra
 spec:
-  order: 30
+  podSelector:
   ingress:
-  - action: Allow
-    source:
-      namespaceSelector: source.group.netpolicy.hypermachines.net/infra == 'true'
-        
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            ource.group.netpolicy.hypermachines.net/infra: "infra"         
