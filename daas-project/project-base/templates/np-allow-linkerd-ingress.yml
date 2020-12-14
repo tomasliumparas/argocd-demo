@@ -3,6 +3,7 @@ kind: NetworkPolicy
 metadata:
   name: allow-ingress-group-infra
 spec:
+  selector: all()
   ingress:
   - action: Allow
     source:
