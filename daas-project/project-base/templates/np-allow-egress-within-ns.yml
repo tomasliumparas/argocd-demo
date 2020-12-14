@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-egress-within-ns
+spec:
+  podSelector:
+  egress:
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }}: "true" 
