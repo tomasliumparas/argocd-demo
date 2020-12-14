@@ -6,6 +6,7 @@ spec:
   selector: all()
   ingress:
   - action: Allow
+    protocol: TCP
     source:
       namespaceSelector: source.ns.netpolicy.hypermachines.net/daas-{{ .Values.project.key }} == 'true'
                   
