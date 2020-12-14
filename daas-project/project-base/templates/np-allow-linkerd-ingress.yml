@@ -1,11 +1,10 @@
+apiVersion: crd.projectcalico.org/v1
 kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
 metadata:
-  name: allow-linkerd-ingress
+  name: allow-ingress-group-infra
 spec:
-  podSelector: {}
   ingress:
-  - from:
-    - namespaceSelector:
-        matchLabels:
-          linkerd.io/control-plane-ns: linkerd
+  - action: Allow
+    source:
+      namespaceSelector: slinkerd.io/control-plane-ns == 'linkerd'
+                  
