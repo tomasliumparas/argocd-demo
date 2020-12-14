@@ -6,6 +6,7 @@ spec:
   selector: all()
   ingress:
   - action: Allow
+    protocol: TCP
     source:
       namespaceSelector: slinkerd.io/control-plane-ns == 'linkerd'
                   
