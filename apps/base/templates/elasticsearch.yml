@@ -11,6 +11,10 @@ spec:
     repoURL: https://helm.elastic.co
     targetRevision: 7.10.1
     chart: elasticsearch
+    helm:
+      parameters:
+        - name: "persistence.enabled"
+          value: "false"      
 
   destination:
     server: https://kubernetes.default.svc
