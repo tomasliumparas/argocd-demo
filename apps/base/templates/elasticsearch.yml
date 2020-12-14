@@ -16,11 +16,11 @@ spec:
         - name: "persistence.enabled"
           value: "false"
         - name: "resources.requests.cpu"
-          value: "3000m"
+          value: "2000m"
         - name: "resources.requests.memory"
           value: "8Gi"          
         - name: "resources.limits.cpu"
-          value: "3000m"
+          value: "2000m"
         - name: "resources.limits.memory"
           value: "8Gi"             
 
