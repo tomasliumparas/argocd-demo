@@ -26,7 +26,7 @@ spec:
         - name: "esJavaOpts"
           value: "-Xmx6g -Xms6g"
         - name: "replicas"
-          values: "3"
+          values: "1"
         - name: "minimumMasterNodes"
           value: "1"               
 
