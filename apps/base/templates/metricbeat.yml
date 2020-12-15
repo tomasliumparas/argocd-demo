@@ -10,26 +10,11 @@ spec:
   source:
     repoURL: https://helm.elastic.co
     targetRevision: 7.10.1
-    chart: elasticsearch
+    chart: metricbeat
     helm:
       parameters:
-        - name: "persistence.enabled"
-          value: "false"
-        - name: "resources.requests.cpu"
-          value: "2000m"
-        - name: "resources.requests.memory"
-          value: "12Gi"          
-        - name: "resources.limits.cpu"
-          value: "2000m"
-        - name: "resources.limits.memory"
-          value: "12Gi"
-        - name: "esJavaOpts"
-          value: "-Xmx6g -Xms6g"
         - name: "replicas"
-          values: "3"
-        - name: "minimumMasterNodes"
-          value: "1"               
-
+          values: "1"
 
   destination:
     server: https://kubernetes.default.svc
