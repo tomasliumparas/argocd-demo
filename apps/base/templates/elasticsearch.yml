@@ -28,7 +28,7 @@ spec:
         - name: "replicas"
           values: "1"
         - name: "minimumMasterNodes"
-          value: ""               
+          value: "1"               
 
 
   destination:
