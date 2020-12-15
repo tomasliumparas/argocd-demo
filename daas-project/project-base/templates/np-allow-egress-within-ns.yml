@@ -3,7 +3,7 @@ kind: NetworkPolicy
 metadata:
   name: allow-egress-within-ns
 spec:
-  podSelector:
+  podSelector: {}
   egress:
     - to:
       - namespaceSelector:
