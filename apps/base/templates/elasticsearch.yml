@@ -30,7 +30,7 @@ spec:
         - name: "minimumMasterNodes"
           value: "0"
         - name: "esConfig.elasticsearch.yml"
-          values: |
+          value: |
             discovery:
               type: single-node
               seed_hosts: ""                     
