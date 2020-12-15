@@ -32,7 +32,7 @@ spec:
       
       values: |
         esConfig:
-          elasticsearch.yml
+          elasticsearch.yml: |
             discovery:
               type: single-node
               seed_hosts: ""                     
