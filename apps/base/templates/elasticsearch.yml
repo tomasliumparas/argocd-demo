@@ -22,7 +22,9 @@ spec:
         - name: "resources.limits.cpu"
           value: "2000m"
         - name: "resources.limits.memory"
-          value: "8Gi"             
+          value: "8Gi"
+        - name: "esJavaOpts"
+          value: "-Xmx4g -Xms4g"                       
 
 
   destination:
