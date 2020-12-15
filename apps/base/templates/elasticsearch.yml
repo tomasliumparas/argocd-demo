@@ -30,13 +30,12 @@ spec:
         - name: "minimumMasterNodes"
           value: "0"
       
-      values:
-        - name: |
-            esConfig:
-              elasticsearch.yml
-                discovery:
-                  type: single-node
-                  seed_hosts: ""                     
+      values: |
+        esConfig:
+          elasticsearch.yml
+            discovery:
+              type: single-node
+              seed_hosts: ""                     
 
 
   destination:
