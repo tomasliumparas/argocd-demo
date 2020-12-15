@@ -29,7 +29,7 @@ spec:
           values: "1"
         - name: "minimumMasterNodes"
           value: "0"
-        - name: "esConfig.elasticsearch\.yml"
+        - name: "esConfig.elasticsearch/.yml"
           value: |
             discovery:
               type: single-node
