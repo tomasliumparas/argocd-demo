@@ -31,14 +31,14 @@ spec:
           value: "0"
         - name: "priorityClassName"
           value: "k8s-cluster-critical" 
-        - name: "nodeSelector\.kubernetes.io\/hostname"
-          value: "snode0"
       values: |
         esConfig:
           elasticsearch.yml: |
             discovery:
               type: single-node
-              seed_hosts: ""                     
+              seed_hosts: ""
+        nodeSelector:
+          kubernetes.io/hostname: "snode0"     
 
 
   destination:
