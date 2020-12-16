@@ -29,7 +29,10 @@ spec:
           values: "1"
         - name: "minimumMasterNodes"
           value: "0"
-      
+        - name: "priorityClassName"
+          value: "k8s-cluster-critical" 
+        - name: "nodeSelector.kubernetes\.io/hostname"
+          value: "snode0"
       values: |
         esConfig:
           elasticsearch.yml: |
