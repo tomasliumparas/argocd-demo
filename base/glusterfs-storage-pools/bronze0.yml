@@ -8,4 +8,4 @@ spec:
   type: Replica1
   storage:
     - node: snode0
-      device: /dev/sde
+      device: /dev/sdd
