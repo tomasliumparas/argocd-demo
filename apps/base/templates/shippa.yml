@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: shippa
+  name: shipa
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://shipa-charts.storage.googleapis.com
     targetRevision: 1.1.1
-    chart: shippa
+    chart: shipa
     helm:
       parameters:
       - name: "auth.adminUser"
@@ -21,7 +21,7 @@ spec:
         
   destination:
     server: https://kubernetes.default.svc
-    namespace: shippa-system
+    namespace: shipa-system
   syncPolicy:
     automated: 
       prune: true 
