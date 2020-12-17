@@ -14,7 +14,7 @@ spec:
     helm:
       parameters:
       - name: "auth.adminUser"
-        value: "admin"
+        value: "admin@daas.lt"
 
       - name: "auth.adminPassword"
         value: "0*u!q1@c6s7$fc7$"
