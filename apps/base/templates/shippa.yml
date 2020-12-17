@@ -18,7 +18,29 @@ spec:
 
       - name: "auth.adminPassword"
         value: "0*u!q1@c6s7$fc7$"
-        
+
+      - name: "shipaApi.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/api:helm-v1.0.88"        
+
+      - name: "dashboard.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/dashboard:v2.0.30"
+
+      - name: "guardian.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/guardian:helm-chart"
+
+      - name: "cli.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/cli:v0.0.69"
+
+      - name: "metrics.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/metrics:v0.0.5"
+
+      - name: "busybody.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/bb:v0.0.6"
+
+      - name: "netdata.image"
+        value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/netdata:v0.0.4"
+
+
   destination:
     server: https://kubernetes.default.svc
     namespace: shipa-system
