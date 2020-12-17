@@ -40,6 +40,14 @@ spec:
       - name: "netdata.image"
         value: "demo-registry.hypermachines.net/daas-cache/library/shipasoftware/netdata:v0.0.4"
 
+      - name: "serviceAccount.create"
+        value: "false"
+
+      - name: serviceAccount.name"
+        value: "shipa"
+
+      
+
 
   destination:
     server: https://kubernetes.default.svc
@@ -51,7 +59,7 @@ spec:
       allowEmpty: false 
     syncOptions:     
     - Validate=false 
-    - CreateNamespace=true 
+    - CreateNamespace=false 
     retry:
       limit: 5 
       backoff:
