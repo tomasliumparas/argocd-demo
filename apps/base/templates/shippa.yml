@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shippa
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: base
+  source:
+    repoURL: https://shipa-charts.storage.googleapis.com
+    targetRevision: 1.1.1
+    chart: shippa
+    helm:
+      parameters:
+      - name: "auth.adminUser"
+        value: "admin@admin.lt"
+
+      - name: "auth.adminPassword"
+        value: "admin"
+        
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: shippa-system
+  syncPolicy:
+    automated: 
+      prune: true 
+      selfHeal: true 
+      allowEmpty: false 
+    syncOptions:     
+    - Validate=false 
+    - CreateNamespace=true 
+    retry:
+      limit: 5 
+      backoff:
+        duration: 5s 
+        factor: 2 
+        maxDuration: 3m 
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
