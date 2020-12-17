@@ -23,7 +23,7 @@ spec:
         value: "demo-registry.hypermachines.net/daas-cache/shipasoftware/api:helm-v1.0.88"        
 
       - name: "dashboard.image"
-        value: "demo-registry.hypermachines.net/daas-cache/shipasoftware/dashboard:v2.0.30"
+        value: "shipasoftware/dashboard:v2.0.30"
 
       - name: "guardian.image"
         value: "demo-registry.hypermachines.net/daas-cache/shipasoftware/guardian:helm-chart"
